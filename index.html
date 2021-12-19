@@ -1,6 +1,24 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+</head>
 <body>
-<h2>cook1eegames Incremental Games</h2>
-<a href="./universe-shrinker">Universe Shrinker</a>
+    You will be redirected to <a target="_blank" href="https://veprogames.github.io">https://veprogames.github.io</a>.
+
+    <p>If you are not redirected automatically (e. g. blocked popup), please click the link above ↑</p>
+
+    <script>
+        onload = () => {
+            const suffix = window.location.pathname;
+            const link = document.querySelector("a");
+            const location = "https://veprogames.github.io" + suffix;
+            link.href = link.innerText = location;
+            window.open(location);
+        };
+    </script>
 </body>
 </html>
